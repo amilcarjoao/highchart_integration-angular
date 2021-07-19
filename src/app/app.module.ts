@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HighchartComponent } from './components/highchart/highchart.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HighchartComponent
   ],
   imports: [
     BrowserModule,
