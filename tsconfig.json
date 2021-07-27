@@ -5,8 +5,8 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-/*     "strict": true,
- */    "noImplicitReturns": true,
+/*     "strict": true,*/    
+    "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "declaration": false,
@@ -14,12 +14,26 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
-    "target": "es2017",
-    "module": "es2020",
+    
+/*     "target": "es2017",
+    "module": "es2020", */
+
     "lib": [
       "es2018",
       "dom"
+    ],
+
+    //code provenant tutos
+    "emitDecoratorMetadata": true,
+    "removeComments": false,
+    "noImplicitAny": false,
+    "target": "es5",
+    "module": "es6",
+    "typeRoots": [
+      "../node_modules/@types"
     ]
+
+    
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -27,5 +41,10 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true,
     "noImplicitAny": false,
-  }
+  },
+
+  "exclude": [
+    "node_modules"
+  ]
+  
 }

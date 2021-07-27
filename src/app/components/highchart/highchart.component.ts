@@ -12,12 +12,20 @@ Exporting(Highcharts);
   templateUrl: "./highchart.component.html",
   styleUrls: ["./highchart.component.css"]
 })
+
+
+
+
+/* // Create a timer
+let start = +new Date(); */
+
 // Generate the chart
+
 export class HighchartComponent {
   Highcharts: typeof Highcharts = Highcharts;
 
   chartOptions: Highcharts.Options = {
- 
+
     chart: {
       events: {
           load: function () {
@@ -73,6 +81,17 @@ export class HighchartComponent {
       text: 'Built chart in ...', // dummy text to reserve space for dynamic subtitle
       align: 'left'
   },
+
+/*           series: [{
+            name: 'Temperature',
+            data: data.data,
+            pointStart: data.pointStart,
+            pointInterval: data.pointInterval,
+            tooltip: {
+                valueDecimals: 1,
+                valueSuffix: '°C'
+            }
+        }] */
 
 }
 

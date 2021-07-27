@@ -1,8 +1,8 @@
-Highcharts.getJSON ('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/large-dataset.json', function (data) {
+Highcharts.getJSON('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/samples/data/large-dataset.json', function (data) {
 
     // Create a timer
     var start = +new Date();
-    
+
     // Create the chart
     Highcharts.stockChart('container', {
         chart: {
@@ -64,6 +64,17 @@ Highcharts.getJSON ('https://cdn.jsdelivr.net/gh/highcharts/highcharts@v7.0.0/sa
         },
 
 
+        // A AJOUTER DANS LE ..
+        series: [{
+            name: 'Temperature',
+            data: data.data,
+            pointStart: data.pointStart,
+            pointInterval: data.pointInterval,
+            tooltip: {
+                valueDecimals: 1,
+                valueSuffix: '°C'
+            }
+        }]
 
     });
 });
