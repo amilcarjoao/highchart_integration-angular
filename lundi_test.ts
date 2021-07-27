@@ -23,23 +23,20 @@ let start = +new Date(); */
 
 export class HighchartComponent {
 
-    constructor()
-    {
-        data: number[]
-    }    
+  
     Highcharts: typeof Highcharts = Highcharts;
 
     chartOptions: Highcharts.Options = {
 
         chart: {
-        events: {
-            load: function () {
-                    this.setTitle(null, {
-                        text: 'Built chart in ms'
-                    });
-            }
-        },
-        zoomType: 'x'
+            events: {
+                load: function () {
+                        // this.setTitle(null, {
+                        //     text: 'Built chart in 10 ms'
+                        // });
+                }
+            },
+            zoomType: 'x'
         },
 
         rangeSelector: {
